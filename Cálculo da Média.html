@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag HTML div</title>
+    <style type="text/css">
+        #cabecalho{
+            background-color: black;
+            width: auto;
+            color: white;
+            height: 120px;
+            margin: 20px auto;
+            padding-left:20px;
+            padding-top:10px;
+        }
+        .centralizado {
+            background-color: rgb(182, 240, 199);
+            border: 2px solid #999;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        #rodape{
+            background-color:#2d0dbb;
+            width: auto;
+            color:rgb(255, 255, 255);
+            height: 120px;
+            margin: 20px auto;
+            padding-left:20px;
+            padding-top: 5px;
+       }
+    </style>     
+</head>
+<body>
+    <div id="cabecalho">
+        <h1>Área de cabeçalho</h1>
+    </div> 
+    <div id="conteudo">
+        <div id="primeiroConteudo" class="centralizado">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed eu pellentesque augue. Suspendisse efficitur elementum condimentum. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis ornare 
+                tortor, in elementum velit. Sed vehicula libero in ipsum feugiat, 
+                ut pellentesque velit commodo. Sed ultrices id massa a molestie. 
+                Duis ornare vitae ante et pellentesque. Sed libero felis, iaculis ut nisl 
+                sit amet, dictum laoreet arcu. Curabitur dapibus consequat nibh, ac auctor 
+                leo pharetra eget. Duis interdum arcu nulla, id congue nunc finibus sed. 
+                Nulla ante tellus, bibendum eget urna et, blandit posuere libero.</p>
+        </div> 
+        <div id="segundoConteudo" class="centralizado">
+            <p><strong>Cálculo da Média</strong></p>
+			<form action="/action_page.php">
+			<label for="fname">Informe a 1ª nota:</label>
+			<input id="n1" type="number"><br><br>
+			<label for="lname">Informe a 2ª nota:</label>
+			<input id="n2" type="number"><br><br>
+			<input type="button" onclick="mostraMedia()" value="Calcular" id="botao" />
+            <p>Resultado = <strong id="resultado"></strong></p>
+			</form>		            
+        </div>  
+        <script>
+            function mostraMedia()
+           {
+            var nota1 = parseFloat(document.getElementById("n1").value);
+            var nota2 = parseFloat(document.getElementById("n2").value);
+            var resultado = (nota1 + nota2)/2;
+           document.getElementById('resultado').innerHTML = resultado + " OI";
+                  
+              
+           }
+           </script>
+    </div> 
+    
+    <div id="rodape">
+        <p>Conteúdo do rodapé.</p>
+    </div>
+</body>
+</html>
